@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/doc/" />
+  <Folder Name="/src/">
+    <Project Path="src/BlaisePascal.Ereditarietà.Domain/BlaisePascal.Ereditarietà.Domain.csproj" />
+    <Project Path="src/BlaisePascal.Ereditarietà.UIConsole/BlaisePascal.Ereditarietà.UIConsole.csproj" Id="6fbb7b20-c1f8-46b5-b413-7a692d0d26cb" />
+  </Folder>
+  <Folder Name="/test/" />
+</Solution>
