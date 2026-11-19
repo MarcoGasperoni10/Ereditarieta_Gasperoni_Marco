@@ -1,15 +1,41 @@
-﻿namespace BlaisePascal.Ereditarietà.Domain
+﻿using System.Xml.Linq;
+
+namespace BlaisePascal.Ereditarietà.Domain
 {
     public class Person
     {
-        public string Name { get; private set; }
+        private string _name;
+        private string _surname;
+        public string Name 
+        {
+            get
+            {
+                return _name;
+            }
+            private set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                    throw new ArgumentException("Error: name must not be empty or blank.");
+                _name = value;
+            }
+        }
 
-        public string Surname { get; private set; }
+        public string Surname
+        {
+            get
+            {
+                return _surname;
+            }
+            private set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                    throw new ArgumentException("Error: surname must not be empty or blank.");
+                _surname = value;
+            }
+        }
 
         public Person(string name, string surname)
         {
-            if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(surname))
-                throw new ArgumentException("Error: name and surname must not be empty or blank.");
             Name = name;
             Surname = surname;
         }
